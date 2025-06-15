@@ -1,0 +1,447 @@
+
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body { background: #f8f9fa; margin: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+    .catalog-header {
+        background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem 1rem 1rem;
+        font-size: 2.2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border-radius: 0 0 1.5rem 1.5rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        line-height: 1.3;
+    }
+    .catalog-header .contact {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 0.7rem;
+        color: #e0f7fa;
+    }
+    .catalog-footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 1.5rem 1rem 2rem 1rem;
+        font-size: 1.2rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+        margin-top: 2rem;
+        letter-spacing: 1px;
+    }
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem 2vw;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .product-card {
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding-bottom: 1.5rem;
+    }
+    .product-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+    }
+    .product-img {
+        width: 100%;
+        max-width: 240px;
+        aspect-ratio: 4/3;
+        object-fit: contain;
+        background: #f0f0f0;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    .product-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #222;
+        text-align: center;
+        margin: 0 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+    @media (max-width: 900px) {
+        .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+        .catalog-header { font-size: 1.2rem; padding: 1.2rem 0.5rem 0.5rem 0.5rem; }
+        .catalog-footer { font-size: 1rem; padding: 1rem 0.5rem 1.2rem 0.5rem; }
+        .catalog-grid { padding: 1rem 0.5vw; gap: 1rem; grid-template-columns: 1fr; }
+        .product-card { border-radius: 0.7rem; }
+    }
+    </style>
+    </head>
+    <body>
+        <div class="catalog-header">
+            MadeByPersians.ir<br>
+            <span class="contact">email: info@madebypersians.ir &nbsp; | &nbsp; WhatsApp: +989214843361</span>
+        </div>
+        <div class="catalog-grid">
+    
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-چهار-مغز-خام.jpg" alt="آجیل چهار مغز خام">
+            <div class="product-name">آجیل چهار مغز خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-چهار-مغز-شور.jpg" alt="آجیل چهار مغز شور">
+            <div class="product-name">آجیل چهار مغز شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-شیرین-1.jpg" alt="آجیل شیرین">
+            <div class="product-name">آجیل شیرین</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-عربی.jpg" alt="آجیل عربی">
+            <div class="product-name">آجیل عربی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-12-2.jpg" alt="آجیل قاقوت">
+            <div class="product-name">آجیل قاقوت</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/توت-خشک-صادراتی-1.jpg" alt="توت خشک صادراتی">
+            <div class="product-name">توت خشک صادراتی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-خام-اعلا.jpg" alt="بادام هندی خام اعلا">
+            <div class="product-name">بادام هندی خام اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-1-2.jpg" alt="خلال پسته">
+            <div class="product-name">خلال پسته</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-27-1.jpg" alt="نخودچی خام">
+            <div class="product-name">نخودچی خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/قیصی-4.jpg" alt="قیصی">
+            <div class="product-name">قیصی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/زرشک-صادراتی-2_prev_ui.jpg" alt="زرشک صادراتی">
+            <div class="product-name">زرشک صادراتی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-تخمه-کدو-گوشتی-مرغوب-شور-2.jpg" alt="مغز تخمه کدو گوشتی مرغوب شور">
+            <div class="product-name">مغز تخمه کدو گوشتی مرغوب شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/ماکادمیا-فندق-استوایی.jpg" alt="ماکادمیا (فندق استوایی)">
+            <div class="product-name">ماکادمیا (فندق استوایی)</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/خرما-پیام-ممتاز-2.jpg" alt="خرما پیام ممتاز">
+            <div class="product-name">خرما پیام ممتاز</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-6-2.jpg" alt="آلو شابلون">
+            <div class="product-name">آلو شابلون</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-3-2.jpg" alt="انجیر خشک اعلا">
+            <div class="product-name">انجیر خشک اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-زمینی-آستانه.jpg" alt="بادام زمینی آستانه">
+            <div class="product-name">بادام زمینی آستانه</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-زمینی-غلاف-دار-مرغوب.jpg" alt="بادام زمینی غلاف دار مرغوب">
+            <div class="product-name">بادام زمینی غلاف دار مرغوب</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-منقا-ممتاز-خام-1.jpg" alt="بادام منقا ممتاز خام">
+            <div class="product-name">بادام منقا ممتاز خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-منقا-ممتاز-شور.jpg" alt="بادام منقا ممتاز شور">
+            <div class="product-name">بادام منقا ممتاز شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-اعلا-خام-1.jpg" alt="بادام هندی اعلا خام">
+            <div class="product-name">بادام هندی اعلا خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-اعلا-شور-1.jpg" alt="بادام هندی اعلا شور">
+            <div class="product-name">بادام هندی اعلا شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-با-پوست.jpg" alt="بادام هندی با پوست">
+            <div class="product-name">بادام هندی با پوست</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-4-1.jpg" alt="خلال بادام">
+            <div class="product-name">خلال بادام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-بادام-دستچین-ایرانی-خام-1.jpg" alt="مغز بادام دستچین ایرانی خام">
+            <div class="product-name">مغز بادام دستچین ایرانی خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-بادام-دستچین-ایرانی-شور-3.jpg" alt="مغز بادام دستچین ایرانی شور">
+            <div class="product-name">مغز بادام دستچین ایرانی شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-16-1.jpg" alt="پسته احمد آقایی دستچین خام">
+            <div class="product-name">پسته احمد آقایی دستچین خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-17-1.jpg" alt="پسته احمد آقایی دستچین شور">
+            <div class="product-name">پسته احمد آقایی دستچین شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-احمد-آقایی-شور-1.jpg" alt="پسته احمد آقایی شور">
+            <div class="product-name">پسته احمد آقایی شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-اکبری-اعلا-خام.jpg" alt="پسته اکبری اعلا خام">
+            <div class="product-name">پسته اکبری اعلا خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-اکبری-اعلا-شور-1.jpg" alt="پسته اکبری اعلا شور">
+            <div class="product-name">پسته اکبری اعلا شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-فندقی-خام-1.jpg" alt="پسته فندقی خام">
+            <div class="product-name">پسته فندقی خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-فندقی-شور-1.jpg" alt="پسته فندقی شور">
+            <div class="product-name">پسته فندقی شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/پسته-کله-قوچی.jpg" alt="پسته کله قوچی خام">
+            <div class="product-name">پسته کله قوچی خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-پسته-اعلا-2.jpg" alt="مغز پسته اعلا">
+            <div class="product-name">مغز پسته اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-آفتابگردان-ایرانی-دور-سفید.jpg" alt="تخمه آفتابگردان دور سفید ایرانی">
+            <div class="product-name">تخمه آفتابگردان دور سفید ایرانی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-جابونی-گلپر-1.jpg" alt="تخمه جابونی گلپر">
+            <div class="product-name">تخمه جابونی گلپر</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-2-4.jpg" alt="تخمه جابونی ممتاز">
+            <div class="product-name">تخمه جابونی ممتاز</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/کدو-دو-آتیشه-ایرانی-1.jpg" alt="تخمه کدو دو آتیشه ایرانی">
+            <div class="product-name">تخمه کدو دو آتیشه ایرانی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدودو-آتیشه-مشهدی.jpg" alt="تخمه کدو دو آتیشه مشهدی">
+            <div class="product-name">تخمه کدو دو آتیشه مشهدی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/کدو-گوشتی-ایرانی.jpg" alt="تخمه کدو گوشتی ایرانی">
+            <div class="product-name">تخمه کدو گوشتی ایرانی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-22-1.jpg" alt="تخمه کدو مرمری خام">
+            <div class="product-name">تخمه کدو مرمری خام</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-21-1.jpg" alt="تخمه کدو مرمری شور">
+            <div class="product-name">تخمه کدو مرمری شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدو-مشهدی.jpg" alt="تخمه کدو مشهدی">
+            <div class="product-name">تخمه کدو مشهدی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدو-مشهدی-مرغوب-1.jpg" alt="تخمه کدو مشهدی مرغوب">
+            <div class="product-name">تخمه کدو مشهدی مرغوب</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-محبوبی-دو-آتیشه-از-آجیل-بازار-با-افتخار،-محصول-_تخمه-محبوبی-دو-آتیشه_-را-به-شما-معرفی-می_کنیم.-این-تخمه-با-کیفیت-برتر-و-طعم-بی_نظ.jpg" alt="تخمه محبوبی دو آتیشه">
+            <div class="product-name">تخمه محبوبی دو آتیشه</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project.jpg" alt="تخمه محبوبی زرد">
+            <div class="product-name">تخمه محبوبی زرد</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-تخمه-کدو-گوشتی-مرغوب-خاص-1.jpg" alt="مغز تخمه کدو گوشتی مرغوب خاص">
+            <div class="product-name">مغز تخمه کدو گوشتی مرغوب خاص</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/فندوق-خام-اعلا-1.jpg" alt="فندق خام اعلا">
+            <div class="product-name">فندق خام اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/فندوق-1.jpg" alt="فندوق">
+            <div class="product-name">فندوق</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/گردو-با-پوست.jpg" alt="گردو با پوست">
+            <div class="product-name">گردو با پوست</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مغز-گردو-دستچین-آستانه.jpg" alt="مغز گردو دستچین آستانه">
+            <div class="product-name">مغز گردو دستچین آستانه</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-26-1.jpg" alt="نخودچی شور">
+            <div class="product-name">نخودچی شور</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-14.jpg" alt="کرنبری">
+            <div class="product-name">کرنبری</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-11-1.jpg" alt="پوملو (میوه استوایی)">
+            <div class="product-name">پوملو (میوه استوایی)</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25.jpg" alt="حبه انبه">
+            <div class="product-name">حبه انبه</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25.jpg" alt="حبه زنجبیل">
+            <div class="product-name">حبه زنجبیل</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-9-2.jpg" alt="حبه عناب">
+            <div class="product-name">حبه عناب</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-19.jpg" alt="حبه گیلاس خشک خارجی">
+            <div class="product-name">حبه گیلاس خشک خارجی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-16.jpg" alt="حبه نارگیل">
+            <div class="product-name">حبه نارگیل</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/خرما-زاهدی-3.jpg" alt="خرما زاهدی">
+            <div class="product-name">خرما زاهدی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-12.jpg" alt="عناب ممتاز دستچین">
+            <div class="product-name">عناب ممتاز دستچین</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/کشمش-سایه-خشک-600x600.jpg" alt="کشمش سایه خشک">
+            <div class="product-name">کشمش سایه خشک</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/کشمش-سبز-اعلا-2-1.jpg" alt="کشمش سبز اعلا">
+            <div class="product-name">کشمش سبز اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/مویز-شاهانی-صادراتی-3.jpg" alt="مویز شاهانی صادراتی">
+            <div class="product-name">مویز شاهانی صادراتی</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-7-2.jpg" alt="میوه خشک اعلا">
+            <div class="product-name">میوه خشک اعلا</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-28.jpg" alt="هل سبز اکبر">
+            <div class="product-name">هل سبز اکبر</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25-1.jpg" alt="باسلوق">
+            <div class="product-name">باسلوق</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/قطاب-یزد-1.jpg" alt="قطاب یزد">
+            <div class="product-name">قطاب یزد</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-11.jpg" alt="لوکوم مغزدار">
+            <div class="product-name">لوکوم مغزدار</div>
+        </div>
+        </div>
+        <div class="catalog-footer">End of Catalog &copy; 2024</div>
+    </body>
+    </html>
