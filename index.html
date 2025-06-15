@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کاتالوگ محصولات - MadeByPersians.ir</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts - Vazir -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #4a7c59;
+            --accent-color: #8fbc8f;
+            --gold-color: #d4af37;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .whatsapp-link {
+            color: #25d366;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            color: #128c7e;
+            transform: scale(1.05);
+        }
+
+        .email-link {
+            color: #ffd700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #ffed4e;
+            transform: scale(1.05);
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: var(--white);
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .intro-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .intro-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--gold-color);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--gold-color), #b8860b);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--gold-color);
+        }
+
+        .contact-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold-color);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .footer-link {
+            color: var(--gold-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 0;
+            }
+
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .brand-name {
+                font-size: 1.5rem;
+            }
+
+            .intro-title, .section-title, .contact-title {
+                font-size: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .product-card {
+                margin: 0 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="logo-container">
+                        <img src="logo-rb.png" alt="MadeByPersians Logo" class="logo">
+                        <h1 class="brand-name">MadeByPersians.ir</h1>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/989214843361" class="whatsapp-link" target="_blank">
+                                +۹۸۹۲۱۴۸۴۳۳۶۱
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:sales@madebypersians.ir" class="email-link">
+                                sales@madebypersians.ir
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>زبان: فارسی</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="intro-title scroll-animate">به MadeByPersians خوش آمدید</h2>
+            <p class="intro-text scroll-animate">
+                در <strong>MadeByPersians</strong>، ما بهترین محصولات را مستقیماً از تولیدکنندگان ایرانی با کیفیت برتر به شما ارائه می‌دهیم!
+                <br>
+                از آجیل و خشکبار گرفته تا محصولات سنتی و صنایع دستی، همه با کیفیت صادراتی و قیمت مناسب.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 class="feature-title">دسترسی مستقیم</h4>
+                    <p>ارتباط مستقیم با تولیدکنندگان و حذف واسطه‌ها</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4 class="feature-title">کیفیت برتر</h4>
+                    <p>محصولات با کیفیت صادراتی و استاندارد بین‌المللی</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h4 class="feature-title">واردات آسان</h4>
+                    <p>امکان واردات آسان و سریع به سراسر جهان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title scroll-animate">کاتالوگ محصولات</h2>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="contact-title scroll-animate">تماس با ما</h2>
+            <p class="text-center scroll-animate" style="font-size: 1.2rem; margin-bottom: 3rem;">
+                برای سفارش و کسب اطلاعات بیشتر، با ما در تماس باشید
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-card scroll-animate">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>واتساپ</h4>
+                    <a href="https://wa.me/989214843361" target="_blank">+۹۸۹۲۱۴۸۴۳۳۶۱</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">پاسخگویی ۲۴ ساعته</p>
+                </div>
+                <div class="contact-card scroll-animate">
+                    <i class="fas fa-envelope"></i>
+                    <h4>ایمیل</h4>
+                    <a href="mailto:sales@madebypersians.ir">sales@madebypersians.ir</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">پاسخ در کمتر از ۲۴ ساعت</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © ۲۰۲۴ MadeByPersians.ir - 
+                <a href="#" class="footer-link">بهترین محصولات ایرانی را از ما بخواهید</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Products data from JSON
+        const products = [
+            {
+                "product_name": "آجیل چهار مغز خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-چهار-مغز-خام.jpg"
+            },
+            {
+                "product_name": "آجیل چهار مغز شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-چهار-مغز-شور.jpg"
+            },
+            {
+                "product_name": "آجیل شیرین",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-شیرین-1.jpg"
+            },
+            {
+                "product_name": "آجیل عربی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/آجیل-عربی.jpg"
+            },
+            {
+                "product_name": "آجیل قاقوت",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-12-2.jpg"
+            },
+            {
+                "product_name": "توت خشک صادراتی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/توت-خشک-صادراتی-1.jpg"
+            },
+            {
+                "product_name": "بادام هندی خام اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-خام-اعلا.jpg"
+            },
+            {
+                "product_name": "خلال پسته",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-1-2.jpg"
+            },
+            {
+                "product_name": "نخودچی خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-27-1.jpg"
+            },
+            {
+                "product_name": "قیصی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/قیصی-4.jpg"
+            },
+            {
+                "product_name": "زرشک صادراتی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/زرشک-صادراتی-2_prev_ui.jpg"
+            },
+            {
+                "product_name": "مغز تخمه کدو گوشتی مرغوب شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-تخمه-کدو-گوشتی-مرغوب-شور-2.jpg"
+            },
+            {
+                "product_name": "ماکادمیا (فندق استوایی)",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/ماکادمیا-فندق-استوایی.jpg"
+            },
+            {
+                "product_name": "خرما پیام ممتاز",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/خرما-پیام-ممتاز-2.jpg"
+            },
+            {
+                "product_name": "آلو شابلون",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-6-2.jpg"
+            },
+            {
+                "product_name": "انجیر خشک اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-3-2.jpg"
+            },
+            {
+                "product_name": "بادام زمینی آستانه",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-زمینی-آستانه.jpg"
+            },
+            {
+                "product_name": "بادام زمینی غلاف دار مرغوب",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-زمینی-غلاف-دار-مرغوب.jpg"
+            },
+            {
+                "product_name": "بادام منقا ممتاز خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-منقا-ممتاز-خام-1.jpg"
+            },
+            {
+                "product_name": "بادام منقا ممتاز شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-منقا-ممتاز-شور.jpg"
+            },
+            {
+                "product_name": "بادام هندی اعلا خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-اعلا-خام-1.jpg"
+            },
+            {
+                "product_name": "بادام هندی اعلا شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-اعلا-شور-1.jpg"
+            },
+            {
+                "product_name": "بادام هندی با پوست",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/بادام-هندی-با-پوست.jpg"
+            },
+            {
+                "product_name": "خلال بادام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-4-1.jpg"
+            },
+            {
+                "product_name": "مغز بادام دستچین ایرانی خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-بادام-دستچین-ایرانی-خام-1.jpg"
+            },
+            {
+                "product_name": "مغز بادام دستچین ایرانی شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-بادام-دستچین-ایرانی-شور-3.jpg"
+            },
+            {
+                "product_name": "پسته احمد آقایی دستچین خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-16-1.jpg"
+            },
+            {
+                "product_name": "پسته احمد آقایی دستچین شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-17-1.jpg"
+            },
+            {
+                "product_name": "پسته احمد آقایی شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-احمد-آقایی-شور-1.jpg"
+            },
+            {
+                "product_name": "پسته اکبری اعلا خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-اکبری-اعلا-خام.jpg"
+            },
+            {
+                "product_name": "پسته اکبری اعلا شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-اکبری-اعلا-شور-1.jpg"
+            },
+            {
+                "product_name": "پسته فندقی خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-فندقی-خام-1.jpg"
+            },
+            {
+                "product_name": "پسته فندقی شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-فندقی-شور-1.jpg"
+            },
+            {
+                "product_name": "پسته کله قوچی خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/پسته-کله-قوچی.jpg"
+            },
+            {
+                "product_name": "مغز پسته اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-پسته-اعلا-2.jpg"
+            },
+            {
+                "product_name": "تخمه آفتابگردان دور سفید ایرانی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-آفتابگردان-ایرانی-دور-سفید.jpg"
+            },
+            {
+                "product_name": "تخمه جابونی گلپر",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-جابونی-گلپر-1.jpg"
+            },
+            {
+                "product_name": "تخمه جابونی ممتاز",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-2-4.jpg"
+            },
+            {
+                "product_name": "تخمه کدو دو آتیشه ایرانی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/کدو-دو-آتیشه-ایرانی-1.jpg"
+            },
+            {
+                "product_name": "تخمه کدو دو آتیشه مشهدی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدودو-آتیشه-مشهدی.jpg"
+            },
+            {
+                "product_name": "تخمه کدو گوشتی ایرانی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/کدو-گوشتی-ایرانی.jpg"
+            },
+            {
+                "product_name": "تخمه کدو مرمری خام",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-22-1.jpg"
+            },
+            {
+                "product_name": "تخمه کدو مرمری شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-21-1.jpg"
+            },
+            {
+                "product_name": "تخمه کدو مشهدی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدو-مشهدی.jpg"
+            },
+            {
+                "product_name": "تخمه کدو مشهدی مرغوب",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-کدو-مشهدی-مرغوب-1.jpg"
+            },
+            {
+                "product_name": "تخمه محبوبی دو آتیشه",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/تخمه-محبوبی-دو-آتیشه-از-آجیل-بازار-با-افتخار،-محصول-_تخمه-محبوبی-دو-آتیشه_-را-به-شما-معرفی-می_کنیم.-این-تخمه-با-کیفیت-برتر-و-طعم-بی_نظ.jpg"
+            },
+            {
+                "product_name": "تخمه محبوبی زرد",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project.jpg"
+            },
+            {
+                "product_name": "مغز تخمه کدو گوشتی مرغوب خاص",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-تخمه-کدو-گوشتی-مرغوب-خاص-1.jpg"
+            },
+            {
+                "product_name": "فندق خام اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/فندوق-خام-اعلا-1.jpg"
+            },
+            {
+                "product_name": "فندوق",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/فندوق-1.jpg"
+            },
+            {
+                "product_name": "گردو با پوست",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/گردو-با-پوست.jpg"
+            },
+            {
+                "product_name": "مغز گردو دستچین آستانه",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مغز-گردو-دستچین-آستانه.jpg"
+            },
+            {
+                "product_name": "نخودچی شور",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-26-1.jpg"
+            },
+            {
+                "product_name": "کرنبری",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-14.jpg"
+            },
+            {
+                "product_name": "پوملو (میوه استوایی)",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-11-1.jpg"
+            },
+            {
+                "product_name": "حبه انبه",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25.jpg"
+            },
+            {
+                "product_name": "حبه زنجبیل",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25.jpg"
+            },
+            {
+                "product_name": "حبه عناب",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-9-2.jpg"
+            },
+            {
+                "product_name": "حبه گیلاس خشک خارجی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-19.jpg"
+            },
+            {
+                "product_name": "حبه نارگیل",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-16.jpg"
+            },
+            {
+                "product_name": "خرما زاهدی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/خرما-زاهدی-3.jpg"
+            },
+            {
+                "product_name": "عناب ممتاز دستچین",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-12.jpg"
+            },
+            {
+                "product_name": "کشمش سایه خشک",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/کشمش-سایه-خشک-600x600.jpg"
+            },
+            {
+                "product_name": "کشمش سبز اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/کشمش-سبز-اعلا-2-1.jpg"
+            },
+            {
+                "product_name": "مویز شاهانی صادراتی",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/مویز-شاهانی-صادراتی-3.jpg"
+            },
+            {
+                "product_name": "میوه خشک اعلا",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-7-2.jpg"
+            },
+            {
+                "product_name": "هل سبز اکبر",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-28.jpg"
+            },
+            {
+                "product_name": "باسلوق",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-25-1.jpg"
+            },
+            {
+                "product_name": "قطاب یزد",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/قطاب-یزد-1.jpg"
+            },
+            {
+                "product_name": "لوکوم مغزدار",
+                "image_url": "https://ajilbazar.com/wp-content/uploads/2024/01/New-Project-11.jpg"
+            }
+        ];
+
+        // Function to determine product badge
+        function getProductBadge(productName) {
+            if (productName.includes('صادراتی')) return 'صادراتی';
+            if (productName.includes('اعلا') || productName.includes('ممتاز')) return 'درجه یک';
+            if (productName.includes('دستچین')) return 'دستچین';
+            if (productName.includes('مرغوب')) return 'مرغوب';
+            return 'کیفیت برتر';
+        }
+
+        // Function to render products
+        function renderProducts() {
+            const productsGrid = document.getElementById('productsGrid');
+            
+            products.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card scroll-animate';
+                productCard.style.animationDelay = `${index * 0.1}s`;
+                
+                const badge = getProductBadge(product.product_name);
+                
+                productCard.innerHTML = `
+                    <div class="product-badge">${badge}</div>
+                    <img src="${product.image_url}" alt="${product.product_name}" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.product_name}</h3>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Scroll animation
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts();
+            handleScrollAnimation();
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScrollAnimation);
+            
+            // Add fade-in-up class to initial elements
+            document.querySelectorAll('.header, .intro-section').forEach(el => {
+                el.classList.add('fade-in-up');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
